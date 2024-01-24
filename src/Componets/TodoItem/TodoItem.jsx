@@ -7,7 +7,9 @@ const TodoItem = (props) => {
       >
         V
       </span>
-      <p className=" TodoItem-p TodoItem-p--complete">{props.text}</p>
+      <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
+        {props.text}
+      </p>
       <span className="Icon Icon-delete">x</span>
     </li>
   );

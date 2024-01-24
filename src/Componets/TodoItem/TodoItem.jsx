@@ -1,11 +1,16 @@
+import "./TodoItem.css";
 const TodoItem = (props) => {
   return (
-    <li>
-        <span>V</span>
-        <p>{props.text}</p>
-        <span>x</span>
+    <li className="TodoItem">
+      <span
+        className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
+      >
+        V
+      </span>
+      <p className=" TodoItem-p TodoItem-p--complete">{props.text}</p>
+      <span className="Icon Icon-delete">x</span>
     </li>
-  )
-}
+  );
+};
 
-export {TodoItem}
+export { TodoItem };

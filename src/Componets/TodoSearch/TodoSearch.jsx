@@ -1,14 +1,14 @@
 import "./TodoSearch.css";
-const TodoSearch = () => {
+import { useState } from "react";
+
+const TodoSearch = ({ searchValue, setSearchValue }) => {
   return (
     <input
       placeholder="Correr 10 vueltas"
       className="TodoSearch"
+      value={searchValue}
       onChange={(event) => {
-        console.log("Escribiste en el todo search");
-        console.log(event);
-        console.log(event.target);
-        console.log(event.target.value);
+        setSearchValue(event.target.value);
       }}
     />
   );

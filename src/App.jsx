@@ -5,6 +5,7 @@ import { TodoSearch } from "./Componets/TodoSearch/TodoSearch";
 import { TodoList } from "./Componets/TodoList/TodoList";
 import { TodoItem } from "./Componets/TodoItem/TodoItem";
 import { CreateTodoButton } from "./Componets/CreateTodoButton/CreateTodoButton";
+import { useState } from "react";
 
 const defaultTodos = [
   { text: "Correr 10 vueltas", completed: true },
@@ -15,11 +16,18 @@ const defaultTodos = [
 ];
 
 function App() {
+  const [todos, setTodos] = useState(defaultTodos);
+  const completedTodos = todos.filter((todo) => todo.completed).length;
+  const totalTodos = todos.filter((todo) => todo).length;
+
+  const [searchValue, setSearchValue] = useState("");
+  console.log("Los usuarios buscan todo de " + searchValue);
+
   return (
     <div className="cardContent">
       <TodoNav />
-      <TodoCounter completed={16} total={25} />
-      <TodoSearch />
+      <TodoCounter completed={completedTodos} total={totalTodos} />
+      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       <TodoList>
         {defaultTodos.map((todo) => (
           <TodoItem

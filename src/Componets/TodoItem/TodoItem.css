@@ -2,7 +2,7 @@
   background-color: #fafafa;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin-top: 24px;
   box-shadow: 0px 5px 50px rgb(32, 35, 41, 0.15);
@@ -49,4 +49,36 @@
 
 .Icon-delete:hover {
   color: red;
+}
+
+/* ..estilos anteriores */
+.box-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.span-icon-close {
+  color: rgb(255, 98, 98);
+  position: absolute;
+  font-size: 1.5 rem;
+  right: 10px;
+  top: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.deleteIcon {
+  width: 40px;
+  height: 40px;
+}
+.span-icon-done {
+  color: rgb(21, 255, 0);
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.span-icon-uncompleted {
+  color: rgb(164, 165, 164);
+  margin-left: 40px;
+  margin-right: 40px;
 }
